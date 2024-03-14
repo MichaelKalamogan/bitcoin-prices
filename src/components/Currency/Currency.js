@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
-const coindeskURL = "https://api.coindesk.com/v1/bpi/currentprice/";
-
+const coindeskURL = process.env.REACT_APP_COINDESK_URL;
+console.log("coindesk", coindeskURL);
 function Currency(props) {
   const { setCurrency } = props;
   const [price, setPrice] = useState("");
